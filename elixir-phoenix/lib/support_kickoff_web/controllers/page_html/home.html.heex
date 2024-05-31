@@ -1,0 +1,48 @@
+<.flash_group flash={@flash} />
+
+<div class="px-4 py-10 sm:px-6 sm:py-28 lg:px-8 xl:px-28 xl:py-32">
+  <div class="mx-auto max-w-lg lg:mx-0">
+    <div class="flow-root rounded-lg border border-gray-100 py-3 shadow-sm dark:border-gray-700">
+      <dl class="-my-3 divide-y divide-gray-100 text-sm dark:divide-gray-700">
+        <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4 even:dark:bg-zinc-700">
+          <dt class="font-medium text-gray-900 dark:text-white">Machine ID</dt>
+          <dd class="text-gray-700 sm:col-span-2 dark:text-gray-200"><%= @machines["id"] %></dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4 even:dark:bg-zinc-700">
+          <dt class="font-medium text-gray-900 dark:text-white">Machine Name</dt>
+          <dd class="text-gray-700 sm:col-span-2 dark:text-gray-200"><%= @machines["name"] %></dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4 even:dark:bg-zinc-700">
+          <dt class="font-medium text-gray-900 dark:text-white">Image</dt>
+          <dd class="text-gray-700 sm:col-span-2 dark:text-gray-200">
+            <%= @machines["config"]["image"] %>
+          </dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4 even:dark:bg-zinc-700">
+          <dt class="font-medium text-gray-900 dark:text-white">Created At</dt>
+          <dd class="text-gray-700 sm:col-span-2 dark:text-gray-200">
+            <%= @machines["created_at"] %>
+          </dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4 even:dark:bg-zinc-700">
+          <dt class="font-medium text-gray-900 dark:text-white">Region</dt>
+          <dd class="text-gray-700 sm:col-span-2 dark:text-gray-200">
+            <%= @machines["region"] %>
+          </dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4 even:dark:bg-zinc-700">
+          <dt class="font-medium text-gray-900 dark:text-white">Private IP</dt>
+          <dd class="text-gray-700 sm:col-span-2 dark:text-gray-200">
+            <%= @machines["private_ip"] %>
+          </dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4 even:dark:bg-zinc-700">
+          <dt class="font-medium text-gray-900 dark:text-white">State</dt>
+          <dd class="text-gray-700 sm:col-span-2 dark:text-gray-200">
+            <%= @machines["state"] %>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>

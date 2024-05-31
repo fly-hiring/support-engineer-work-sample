@@ -1,0 +1,17 @@
+name: Submit Challenge
+description: Create an issue with this form to submit your Technical Challenge to us
+title: "Submission ready :rocket:"
+labels: ["submitted"]
+body:
+  - type: checkboxes
+    id: submit
+    attributes:
+      label: Technnical Challenge Checklist
+      description: By submitting this issue, you confirm that you have completed all the requirements as described in the README.md. Once you submit, you will not longer be able to make updates to this repo!
+      options:
+        - label: The app is deployed to Fly.io
+          required: true
+        - label: The app displays information about the underlying Fly Machine
+          required: true
+        - label: I have explained my implementation/solution in EXPLAIN.md
+          required: true
