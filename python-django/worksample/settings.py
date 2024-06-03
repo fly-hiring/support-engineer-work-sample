@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-k*v75&*knyv6grbjy)zazja79)jic*50&ql3z-vys(gl)05o!n
 DEBUG = True
 
 # NOTE FOR THE WORK SAMPLE - edit the ALLOWED_HOSTS list and add in the hostname of the Fly app here!
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'se-work-sample-python-django.fly.dev']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
