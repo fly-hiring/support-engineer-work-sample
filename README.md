@@ -13,7 +13,7 @@ You do not need to do any special setup to achieve this.  The project is configu
 
 If you've never used Phoenix or Django before, that's ok! Our customers will use languages you have never experienced before, too. There's plenty of time to figure it out.
 
-Once your app is deployed, write a couple of paragraphs explaining what you did. Add this to the [EXPLAIN.md](EXPLAIN.md) file in the root of the project (there's one for each framework).
+Once your app is deployed, write a couple of paragraphs explaining what you did. Add this to the `EXPLAIN.md` file in the root of the project (there's one for each framework).
 
 ## What we care about
 
