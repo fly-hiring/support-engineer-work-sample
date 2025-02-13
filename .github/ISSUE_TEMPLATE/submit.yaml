@@ -1,7 +1,6 @@
 name: Submit Challenge
 description: Create an issue with this form to submit your Technical Challenge to us
-title: "Submission ready :rocket:"
-labels: ["submitted"]
+title: "[Support Engineer] Submission ready"
 body:
   - type: checkboxes
     id: submit
