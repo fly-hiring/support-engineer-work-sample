@@ -1,3 +1,5 @@
+[![App Deployed](https://github.com/fly-hiring/[REPO_NAME]/actions/workflows/validate.yaml/badge.svg)](https://github.com/fly-hiring/[REPO_NAME]/actions/workflows/validate.yaml)
+
 # Support Engineer Technical Challenge
 
 The first part of the hiring process is a technical challenge. We've provided the starter project in two different languages and frameworks - one using Elixir / Phoenix, and another using Python / Django. Feel free to pick whichever one you feel more comfortable with.
