@@ -1,0 +1,37 @@
+name: Validate Submission
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  test-deployment:
+    if: github.event.issue.title == '[Support Engineer] Submission ready'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test deployment URL
+        id: test-url
+        run: |
+          REPO_NAME="${{ github.repository }}"
+          REPO_NAME=$(echo "$REPO_NAME" | cut -d'/' -f2)
+          URL="https://${REPO_NAME}.fly.dev"
+          echo "url=$URL" >> $GITHUB_OUTPUT
+          
+          echo "Testing deployment at: $URL"
+          if ! curl --connect-timeout 10 -s -o /dev/null "$URL"; then
+            echo "::error::Could not connect to $URL - Please verify your app is deployed to Fly.io with the correct name"
+            echo "Expected app name should match your repository name: $REPO_NAME"
+            exit 1
+          fi
+          
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" $URL)
+          if [ $HTTP_STATUS -ne 200 ]; then
+            echo "::error::Deployment check failed. Got HTTP status: $HTTP_STATUS from $URL"
+            exit 1
+          fi
+          echo "Deployment check successful"
+
+      - name: Create Summary
+        run: |
+          echo "## Deployment URL" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.test-url.outputs.url }}" >> $GITHUB_STEP_SUMMARY
