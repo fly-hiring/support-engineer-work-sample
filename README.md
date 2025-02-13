@@ -40,12 +40,10 @@ Choose whichever framework you'd like to use and feel free to ignore the other c
 
 Deploy your app to Fly.io! Make sure it's running and accessible by the public. Your app's name should be the same as this repo — **[REPO_NAME]** — and should be accessible on `https://[REPO_NAME].fly.dev`.
 
-When you're ready, go ahead and create a new issue in your private repo with the Submit Challenge issue form.
-
-![j9_ejtz3QW2KixYe-bEplP46](https://github.com/fly-hiring/support-engineer-kickoff/assets/3727384/a6c9a6f9-8bd4-45a1-aaa1-2a40a99a0385)
+When you're ready, go ahead and [create a new issue](https://github.com/fly-hiring/[REPO_NAME]/issues/new?template=submit.yaml) in your private repo with the Submit Challenge issue form.
 
 > [!IMPORTANT]  
-> Once you do this, an automatic workflow will trigger and we'll consider your submission final. You won't be able to make changes thereafter.
+> Once you do this, we'll consider your submission final. You won't be able to make changes thereafter.
 
 We review submissions once a week. You'll hear back from us no matter what by the end of the _following_ week, possibly sooner if you submit early in the week.
 
