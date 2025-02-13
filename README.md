@@ -38,6 +38,8 @@ We'll invite you to a private GitHub repo based on this template.
 
 Choose whichever framework you'd like to use and feel free to ignore the other codebase. Do all of your work in the `main` branch. Don't bother with PRs, branches, or spend time on tidy commits — we have software to help us review. Just don't force push over the initial commit or we can't generate a diff of only your work.
 
+Deploy your app to Fly.io! Make sure it's running and accessible by the public. Your app's name should be the same as this repo: [REPO_NAME] and should be accessible on `https://[REPO_NAME].fly.dev`.
+
 When you're ready, go ahead and create a new issue in your private repo with the Submit Challenge issue form.
 
 ![j9_ejtz3QW2KixYe-bEplP46](https://github.com/fly-hiring/support-engineer-kickoff/assets/3727384/a6c9a6f9-8bd4-45a1-aaa1-2a40a99a0385)
