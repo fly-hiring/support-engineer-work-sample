@@ -14,7 +14,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            await octokit.rest.repos.createDispatchEvent({
+            await github.rest.repos.createDispatchEvent({
               owner: 'fly-hiring',
               repo: 'submission-hub',
               event_type: 'submission_request',
