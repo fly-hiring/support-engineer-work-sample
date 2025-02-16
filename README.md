@@ -4,10 +4,12 @@
 
 The first part of the hiring process is a technical challenge. We've provided the starter project in two different languages and frameworks - one using Elixir / Phoenix, and another using Python / Django. Feel free to pick whichever one you feel more comfortable with.
 
-We want you to do two things with the starter project in this repository:
+We want you to do two things with either starter project in this repository:
 
 1. Deploy it to Fly.io
 1. Show a table with some information about the underlying [Fly Machine](https://fly.io/docs/machines/) that the app is running on
+
+The solution must be unambiguous and clearly prove that the data displayed belongs to the underlying Machine serving the request.
 
 The project is mostly ready to go, it's just missing some functionality. The HTML is taken care of. All you need to do is write the logic to fetch some data and display it — then deploy the app!
 
@@ -38,7 +40,7 @@ If you've ever written Elixir or Python before, we expect the coding challenge t
 
 We'll invite you to a private GitHub repo based on this template.
 
-Choose whichever framework you'd like to use and feel free to ignore the other codebase. Do all of your work in the `main` branch. Don't bother with PRs, branches, or spend time on tidy commits — we have software to help us review. Just don't force push over the initial commit or we can't generate a diff of only your work.
+Choose whichever framework you'd like to use and feel free to ignore the other codebase. Do all of your work in the `main` branch! Don't bother with PRs, branches, or spend time on tidy commits — we have software to help us review. Just don't force push over the initial commit or we can't generate a diff of only your work.
 
 Deploy your app to Fly.io! Make sure it's running and accessible by the public. Your app's name should be the same as this repo — **[REPO_NAME]** — and should be accessible on `https://[REPO_NAME].fly.dev`.
 
