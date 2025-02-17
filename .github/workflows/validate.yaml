@@ -18,18 +18,36 @@ jobs:
           echo "url=$URL" >> $GITHUB_OUTPUT
           
           echo "Testing deployment at: $URL"
+          
+          # Get debug header and HTML content
+          DEBUG_HEADER=$(curl -s -I -H "flyio-debug: doit" "$URL" | grep "flyio-debug:")
+          HTML_CONTENT=$(curl -s -H "flyio-debug: doit" "$URL")
+          
+          # Extract machine IDs
+          DEBUG_MACHINE_ID=$(echo "$DEBUG_HEADER" | grep -o '"sid":"[^"]*"' | cut -d'"' -f4)
+          HTML_MACHINE_ID=$(echo "$HTML_CONTENT" | grep -A1 'Machine ID' | grep -o '<dd.*</dd>' | sed 's/<[^>]*>//g' | xargs)
+          
+          # Validate connection and status
           if ! curl --connect-timeout 10 -s -o /dev/null "$URL"; then
             echo "::error::Could not connect to $URL - Please verify your app is deployed to Fly.io with the correct name"
             echo "Expected app name should match your repository name: $REPO_NAME"
             exit 1
           fi
           
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" $URL)
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
           if [ $HTTP_STATUS -ne 200 ]; then
             echo "::error::Deployment check failed. Got HTTP status: $HTTP_STATUS from $URL"
             exit 1
           fi
+          
+          # Validate machine ID match
+          if [ "$DEBUG_MACHINE_ID" != "$HTML_MACHINE_ID" ]; then
+            echo "::error::Machine ID mismatch. Debug header: $DEBUG_MACHINE_ID, HTML content: $HTML_MACHINE_ID"
+            exit 1
+          fi
+          
           echo "Deployment check successful"
+          echo "Machine ID verified: $DEBUG_MACHINE_ID"
 
       - name: Create Summary
         run: |
