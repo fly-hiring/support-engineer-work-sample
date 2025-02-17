@@ -23,9 +23,9 @@ jobs:
           DEBUG_HEADER=$(curl -s -I -H "flyio-debug: doit" "$URL" | grep "flyio-debug:")
           HTML_CONTENT=$(curl -s -H "flyio-debug: doit" "$URL")
           
-          # Extract machine IDs
+          # Extract machine IDs using regex that finds a 14-digit hex string in the content
           DEBUG_MACHINE_ID=$(echo "$DEBUG_HEADER" | grep -o '"sid":"[^"]*"' | cut -d'"' -f4)
-          HTML_MACHINE_ID=$(echo "$HTML_CONTENT" | grep -A1 'Machine ID' | grep -o '<dd.*</dd>' | sed 's/<[^>]*>//g' | xargs)
+          HTML_MACHINE_ID=$(echo "$HTML_CONTENT" | grep -oP '[0-9a-f]{14}' | head -n 1)
           
           # Validate connection and status
           if ! curl --connect-timeout 10 -s -o /dev/null "$URL"; then
