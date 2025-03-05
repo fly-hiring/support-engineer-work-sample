@@ -38,6 +38,9 @@ If you've ever written Elixir or Python before, we expect the coding challenge t
 
 ## Submitting your work
 
+> [!IMPORTANT]  
+> **Please don't commit any sensitive secrets, such as your `FLY_API_TOKEN` to git!**
+
 We'll invite you to a private GitHub repo based on this template.
 
 Choose whichever framework you'd like to use and feel free to ignore the other codebase. Do all of your work in the `main` branch! Don't bother with PRs, branches, or spend time on tidy commits — we have software to help us review. Just don't force push over the initial commit or we can't generate a diff of only your work.
@@ -46,10 +49,12 @@ Deploy your app to Fly.io! Make sure it's running and accessible by the public. 
 
 When you're ready, go ahead and [create a new issue](https://github.com/fly-hiring/[REPO_NAME]/issues/new?template=submit.yaml) in your private repo with the Submit Challenge issue form.
 
-> [!IMPORTANT]  
-> Once you do this, we'll consider your submission final. You won't be able to make changes thereafter.
-
 We review submissions once a week. You'll hear back from us no matter what by the end of the _following_ week, possibly sooner if you submit early in the week.
+
+> [!IMPORTANT]  
+> Once you submit your work, we'll consider your submission final. You won't be able to make changes thereafter.
+
+___________
 
 ## Reference material
 
